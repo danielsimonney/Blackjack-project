@@ -1,0 +1,77 @@
+
+body{
+    background-color: black;
+    background-image: url('https://www.wikihow.com/images/thumb/2/26/Know-when-to-Split-Pairs-in-Blackjack-Step-7.jpg/aid265109-v4-728px-Know-when-to-Split-Pairs-in-Blackjack-Step-7.jpg'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.boutton{
+    text-align: center;
+}
+.container{
+    padding: 2rem;
+    height: inherit;
+    /* background-image: url("https://www.maryus.fr/wp-content/uploads/2017/03/blackjack-44.jpg");
+    background-image: url('https://www.wikihow.com/images/thumb/2/26/Know-when-to-Split-Pairs-in-Blackjack-Step-7.jpg/aid265109-v4-728px-Know-when-to-Split-Pairs-in-Blackjack-Step-7.jpg');  */
+    background-repeat: repeat-y;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.ruleblock{
+margin-bottom: 2rem;
+margin-top: 2rem;
+background-color: rgba(32, 32, 31, 0.911);
+border: 2px solid #f0290698;
+border-radius: 3rem;
+text-align: center;
+}
+
+.title{
+    text-decoration: underline overline rgb(158, 156, 156);
+    margin: 2rem;
+}
+.initialContent{
+    padding: 5rem;
+    border-radius: 5rem;
+    border: 2px solid #dfcfcc;
+    background-color: rgba(32, 32, 31, 0.644);
+    margin-bottom: -1rem;
+    color: #ffffff;
+}
+
+input[type="text"] {
+width: 50%;
+text-align: center;
+margin: auto;
+margin-bottom: 1rem;
+}
+.rules{
+    
+    text-decoration: underline rgb(158, 156, 156);
+   color: rgb(230, 230, 230);
+    padding: 1rem;
+    margin-bottom: 1rem;
+
+    color: white;
+
+}
+.containList{
+text-align: center;
+margin: auto;
+}
+.list-group{
+    width: 70%;
+    margin: auto;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+
+.player{
+    margin-right: 5vw;
+}

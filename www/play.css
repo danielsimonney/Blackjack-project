@@ -1,0 +1,113 @@
+body{
+    color: rgb(194, 190, 190);
+    background-image: url("https://www.maryus.fr/wp-content/uploads/2017/03/blackjack-44.jpg");
+        background-size: cover;
+    background-repeat: no-repeat;
+   
+}
+body h1{
+    text-align: center;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    color: #000000c4;
+    background: linear-gradient(#cfc8c8ce, #d4cfcfb4);
+    border: 2px solid #0f0f0fe5;
+    border-radius: 2rem;
+    
+   
+}
+body .add{
+    margin-bottom: 2rem;
+}
+.contain{
+    color: rgb(194, 190, 190);
+ display: flex;
+ flex-wrap: wrap;
+}
+.submit{
+margin: auto;
+text-align: center;
+background: linear-gradient(#252525af, #3d3d3d8c);
+border: 2px solid #f1a709a4;
+padding: 2rem;
+border-radius: 2rem;
+}
+.submitCroupier{
+    margin: auto;
+    text-align: center;
+    width: 20vw;
+    background: linear-gradient(#252525d0, #3d3d3dde);
+    border: 2px solid #f1a709a4;
+    padding: 2rem;
+    border-radius: 2rem;
+    }
+
+.player{
+  
+  height: 50vh;
+  margin: auto; 
+  margin-bottom: 3rem;
+  text-align: center;
+  padding: 2rem;
+  background:linear-gradient(#0f0f0fe5, #9d9da0fa);
+  border-radius: 2rem;
+  font-size: 1.5rem;
+}
+
+img{
+    margin-left: 1rem;
+}
+.explication{
+    border: solid 3px #e76d1bad;
+    text-align: center;
+    color: #525050ab;
+    
+    font-size: 1.3rem;
+    padding: 1rem;
+    background: linear-gradient(#c2c0c0e5, #f4f4f8de);
+    border-radius: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 10px -16px rgb(51, 51, 51);
+}
+.croupierBoard{
+    box-shadow: 15px -23px rgb(51, 51, 51);
+    height: 50vh;
+    margin: auto; 
+    margin-bottom: 1rem;
+    text-align: center;
+    padding: 2rem;
+    background-color: #030303b0;
+    border-radius: 2rem;
+}
+.croupier{
+    
+    height: 50vh;
+    margin: auto; 
+    margin-bottom: 3rem;
+    text-align: center;
+    padding: 2rem;
+    background:linear-gradient(#0f0f0fe5, #9d9da0fa);
+    border-radius: 2rem;
+    font-size: 1.5rem;
+}
+.croupierCards{
+    font-size: 1.8rem;
+    color: #e4e4e4c7;
+    background-color: #000000e1;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+.images{
+    width: 95%;
+    margin: auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    background: linear-gradient(#969292d5, #c5c5c98f);
+    border-radius: 2rem;
+
+}
+
+

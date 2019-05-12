@@ -1,0 +1,77 @@
+body{
+    
+    background-image: url("https://www.maryus.fr/wp-content/uploads/2017/03/blackjack-44.jpg");
+        background-size: cover;
+    background-repeat: no-repeat;
+   
+}
+.title
+{
+    background-color: #2423236e;
+    border-radius: 0.5rem;
+    margin: auto;
+    width: 50%;
+    padding: 2rem;
+    margin-top: 5vh;
+    margin-bottom: 7vh;
+    text-decoration: underline overline rgb(158, 156, 156);
+}
+
+.explication{
+    color: #ffd105;
+    font-size: 1.2rem;
+    margin: auto;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    width: 50%;
+    background: linear-gradient(#424242e5, #9d9da0fa);
+    padding: 2rem;
+    border: solid 2px white;
+    border-radius: 2rem;
+    box-shadow: 11px 11px 5px black;
+
+}
+b{
+    font-size: 1.4rem;
+    color: red;
+}
+
+.select{
+    background-color: #8b8a8af6;
+    padding: 0.5rem 2rem;
+    border-radius: 1rem;
+    width: 50%;
+    margin: auto;
+
+}
+.containAll{
+    color: #949090c9;
+    border: solid 2px black;
+    background-color: #2020208f;
+    text-align: center;
+}
+/* .containselect{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+} */
+body .list-group-item{
+    background-color: #faae09b7;
+    width: 75%;
+     margin: auto; 
+     color: white;
+
+}
+
+.list-group{
+    margin: auto;
+    width: 60%;
+}
+.bouton{
+    /* margin: auto; */
+    margin-top: 50px;
+    width: 40vw;
+    margin-bottom: 70px;
+}
