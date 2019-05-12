@@ -28,7 +28,7 @@
 <?php foreach($board->getPlayers() as $player):?>
 <?php if($player->getname()!="croupier"): ?>
 <div class="playerResolve col-lg-12">
-  <?php echo $player->result() ?>
+  <?php echo $player->result()." " ?>
   <?php echo $player->printBet() ?>
 </div>
 
@@ -36,20 +36,22 @@
 <?php endif ?>
 <?php endforeach;?>
 
-<?php $board->getMyAlert() ?>
 
+<div class="mysubmit">
 
 <form method="post" action="/?controller=game&action=reinit">
-
-<button type="submit"> recommencer ? </button>
+<div class="quest">Que voulez vous faire maintenant ??</div>
+<button type="submit" class="btn btn-primary btn-lg"> recommencer ? </button>
 </form>
 
 <form method="post" action="/?controller=game&action=reinitialise">
 
-<button type="submit"> Tout réinitialiser ? </button>
+<button type="submit" class="btn btn-outline-dark btn-lg"> Tout réinitialiser ? </button>
 
 </form>
 </div>
+</div>
+<?php $board->getMyAlert() ?>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
  <script src="index.js"></script>
 </body>

@@ -13,5 +13,42 @@ text-align: center;
 margin: auto;
 color: #d89e1fd2;
 margin-bottom: 2rem;
-background: linear-gradient(#333232,#ffffff)
+background: linear-gradient(#333232,#ffffff);
+border: solid 2px #ec6911b9;
+
+box-shadow: 16px 10px 5px rgba(85, 83, 83, 0.767);
+}
+
+.mysubmit{
+    margin: auto;
+    text-align: center;
+    width: 20vw;
+    background: linear-gradient(#f77d0ab4, #eba307c2);
+    border: 2px solid #302f2d71;
+    padding: 2rem;
+    border-radius: 2rem;
+}
+body .btn{
+    margin-top: 1rem;
+    
+}
+
+.quest{
+    background-color: white;
+    border-radius: 1rem;
+    font-size: 1.3rem;
+    color: black;
+}
+
+body h1{
+    text-align: center;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    color: #000000c4;
+    background: linear-gradient(#cfc8c8ce, #d4cfcfb4);
+    border: 2px solid #0f0f0fe5;
+    border-radius: 2rem;
+    
+   
 }

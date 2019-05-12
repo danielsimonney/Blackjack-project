@@ -332,7 +332,7 @@ class Game{
   
   public function SetAlertResults(){
     $message="Place aux résultats désormais bravo à ceux qui ont gagné et bonne chance pour la prochaine partie pour les autres";
-    $type="succsess";
+    $type="success";
     $title="LE jeu est fini";
     $this->alert=array("alert"=>$message,"type"=>$type,"title"=>$title);
     
