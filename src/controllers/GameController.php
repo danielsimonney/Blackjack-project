@@ -32,10 +32,7 @@ class GameController{
       $board->dealCroupierCards();
     }
     
-    
-    
-    
-    
+ 
     if($board->verifyNumberOfCards()>1)
     {
       $board->VerirfyIfWin();
@@ -49,10 +46,7 @@ class GameController{
     
     $board->EntireSave($board,true);
     include("../views/game.php");
-    
-    
   }
-  
   
   function addCard(){
     $board = $this->getBoard();
@@ -60,7 +54,6 @@ class GameController{
     header("Location: /"); exit;
     
   }
-  
   
   function changePlayer(){
     
@@ -102,19 +95,4 @@ class GameController{
     include("../views/croupier.php");
     
   }
-  
-  function reinit(){
-    $board = $this->getBoard();
-    
-    $board->replay();
-    header("Location:/?controller=index&action=home");
-    
-  }
-  function reinitialise(){
-    $board = $this->getBoard();
-    
-    $board->reinit();
-    header("Location:/?controller=index&action=home");
-  }
-
-}
+}  

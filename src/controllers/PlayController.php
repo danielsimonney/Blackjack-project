@@ -25,16 +25,13 @@ class PlayController{
   }
 
   function new_player(){
-    if ($_POST["player_name"]!='') {
       $board = $this->getBoard();
       $player=htmlspecialchars($_POST["player_name"]);
 
       $board->addPlayer($player);
       
       $board->EntireSave($board);
-      header("Location: /"); exit;
-    }
-        
+      header("Location: /"); exit;  
   }
 
   function supress_player(){
@@ -57,6 +54,7 @@ class PlayController{
       $board->startBet();
     
       $board->gameBegin();
+      $board->arrayreinit();
       $board->EntireSave($board);
     header("Location:/?controller=index&action=home"); 
     exit();

@@ -61,8 +61,7 @@ class frDeck {
         return array_pop($this->my52cards);
     }
     public function suppress($array) {
-        
-         array_pop($array);
+        array_pop($array);
         return $array;
     }
 }

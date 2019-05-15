@@ -39,12 +39,12 @@
 
 <div class="mysubmit">
 
-<form method="post" action="/?controller=game&action=reinit">
+<form method="post" action="/?controller=result&action=reinit">
 <div class="quest">Que voulez vous faire maintenant ??</div>
 <button type="submit" class="btn btn-primary btn-lg"> recommencer ? </button>
 </form>
 
-<form method="post" action="/?controller=game&action=reinitialise">
+<form method="post" action="/?controller=result&action=reinitialise">
 
 <button type="submit" class="btn btn-outline-dark btn-lg"> Tout réinitialiser ? </button>
 

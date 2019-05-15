@@ -32,15 +32,17 @@ class ResultController{
 
 
     function reinit(){
-        $board = $this->getBoard();
+        $board = $this->getBoard(); 
         $board->replay();
         $board->Entiresave($board);
+       
+        $board->verifyIfPlayer0();
         header("Location:/?controller=index&action=home");
+        exit();
         
       }
       function reinitialise(){
         $board = $this->getBoard();
-        
         $board->reinit();
         header("Location:/?controller=index&action=home");
       }

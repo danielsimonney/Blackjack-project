@@ -68,9 +68,19 @@ margin: auto;
     color: black;
     font-weight: bold;
     text-align: center;
+    display: flex;
+    justify-content: space-around;
+
 }
 
 
+body .list-group .btn{
+    float: right;
+}
+body .list-group .player{
+    float: left;
+    margin-top: 0.4rem;
+} 
 
 .player{
     margin-right: 5vw;

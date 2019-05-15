@@ -86,7 +86,7 @@ class player {
                 while($sum>=21 || $myAs!=0 ){
                     $sum=$sum-10;
                     $myAs=$myAs-1;
-                    if($myAs==0){
+                    if($myAs==0 || $sum<21){
                         return $sum;
                     }
                 }   

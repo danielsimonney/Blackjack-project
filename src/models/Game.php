@@ -31,6 +31,10 @@ class Game{
     }
   }
 
+  public function arrayreinit(){
+    $this->players=array_values($this->players);
+  }
+
   public function dealCroupierCards(){
       
       $croupier=$this->getCroupier();
@@ -57,6 +61,11 @@ class Game{
   }
   public function addPlayer($name){
     $test=true;
+    if($name==""){
+      $this->setalertPlayerempty();
+      $test=false;
+    }
+    
     foreach ($this->players as $value) {
       if( $name==$value->getname()){
         $test=false;
@@ -123,6 +132,10 @@ class Game{
 
 
   // fonctions qui permettent de mettre le status du game, celui ci empêche l'utilisateur de circuler comme il veut entre les pages
+  public function initialState(){
+    $this->status = "initial";
+  }
+
   public function startBet(){
     $this->status = "mise";
   }
@@ -200,16 +213,31 @@ class Game{
     return (sizeof($croupier->getCard()));
   }
  public function verifyIfPlayer0(){
+   
     $i=0;
-    foreach ($this->players as $value=>$key) {
+    $array0=[];
+    $test=false;
+    foreach ($this->players as $key=>$value) {
       $i=$i+1;
-      if( $value->ArgentJoueur==0){ 
-        $supppress=$key;
-      }
+      if( $value->ArgentJoueur==0){
+        $test=true;
+        array_push($array0,$key);
+     } 
     }
-    $this->SetAlertPlayerMustQuitt(($this->getPlayers()[$supppress])->getname());
-    unset(($this->players)[$supppress]);
+    if($test==true){
+      $this->SetAlertPlayerMustQuitt($array0);
+      foreach ($array0 as $value) {
+        unset(($this->players)[$value]);
+
+      }
+      $this->players=array_values($this->players);
+      
+    }else{
+
+    }
   }
+
+
   public function verify(){
     if((sizeof($this->players))!=0){
       return true;
@@ -381,13 +409,24 @@ class Game{
     $this->alert=array("alert"=>$message,"type"=>$type,"title"=>$title);
   }
 
-  public function SetAlertPlayerMustQuitt($player){
-    $message="C'est dommage";
-    $type="warning";
-    $title=$player." a du nous quitté car il n'avait plus d'argent à miser ,c'est dommage
+  public function SetAlertPlayerMustQuitt($arrayplayer){
+    $names=[];
+    $players=$this->getPlayers();
+    foreach ($arrayplayer as $value) {
+      array_push($names,$players[$value]->getname());
+    }
+    $string=implode(",",$names);
+    $message=$string." a du nous quitté car il n'avait plus d'argent à miser ,c'est dommage
     mais il faut s'attendre à perdre quand on joue, espérons qu'il revienne un autre jour avec plus d'argent .";
+    $type="warning";
+    $title="C'est dommage";
     $this->alert=array("alert"=>$message,"type"=>$type,"title"=>$title);
-    
+  }
+  public function setalertPlayerempty(){
+    $message="Vous devez remplir le champ name avant d'ajouter un player";
+    $type="error";
+    $title="interdit";
+    $this->alert=array("alert"=>$message,"type"=>$type,"title"=>$title);
   }
  
   //Je mets ici le traitement des mises . 
@@ -398,6 +437,9 @@ class Game{
     return $this->IsBetSet;
   }
   public function verifyBet($sumBet,$idPerso){
+    // var_dump($sumBet);
+    // var_dump($idPerso);
+    // var_dump($this);
     $perso= $this->getPlayers()[$idPerso];
     $verify=$perso->verifyBet($sumBet);
     return $verify;
@@ -413,7 +455,7 @@ class Game{
   }
   // ici je fais une fonction qui me réinitialise tout les statuts sauf l'argent de mes joueurs et leurs noms
   public function replay(){
-    $this->startBet();
+    $this->initialState();
     $myplayers=$this->getPlayers();
     
     foreach ($myplayers as  $player) {
@@ -425,6 +467,8 @@ class Game{
     $this->alert="";
     $this->IsBetSet=false;
   }
+
+
   public function reinit(){
     session_destroy();
     
